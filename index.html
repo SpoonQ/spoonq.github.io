@@ -11,22 +11,68 @@
 	padding: 1em;
 	border: 1px #666 solid;
 }
+.slides {
+	list-style: none;
+	overflow: hidden;
+}
+
+.slides > li {
+	display: inline-block;
+}
+
+.slides > li > a > figure > figcaption::before {
+	content: "";
+}
+
+.slides > li > a > figure > figcaption {
+	display: block;
+	font-size: 12pt;
+}
+
+.slides > li > a > figure > img {
+	border: 1px black solid;
+	width: 140px;
+}
 </style>
 	</head>
 	<body style="margin: 0 auto; max-width: 800px">
 		<header class="counter-skip">
 			<h1 class="title">The SpoonQ Project</h1>
 		</header>
+		
 		<nav id="toc" class="counter-skip">
 			<h2>Table of Contents</h2>
 			<ul>
-				<li><a href="#spoonq_1">1st generation SpoonQ Project (2019)</a></li>
 				<li><a href="#spoonq_2">2nd generation SpoonQ Project (2020-)</a></li>
+				<li><a href="#spoonq_1">1st generation SpoonQ Project (2019)</a></li>
 				<li><a href="#rustqubo">RustQUBO Project (2020-)</a></li>
-				<li><a href="#pub">Publications and Slides</a></li>
+				<li><a href="#qbsolv_rust">qbsolv_rust Project (2020-)</a></li>
+				<li><a href="#annealers_rust">annealers_rust Project (2020-)</a></li>
 			</ul>
 		</nav>
 		<main>
+			<aside>
+				<img src="img/logo.svg" style="width: 180px"><br>
+				<a href="//github.com/SpoonQ">GitHub Organization</a>
+			</aside>
+			<h1 id="spoonq_2">2nd generation SpoonQ Project (2020-)</h1>
+			<section>
+				<p>
+					SpoonQ is a SAT problem solver using anneling machine.
+				</p>
+				
+				<a href="https://github.com/SpoonQ/SpoonQ">GitHub Page</a>
+				
+				<h2 id="spoonq_2_screenshots">Screenshots</h2>
+				<img style="width: 300px" src="img/ss1.svg">
+				
+				<h2 id="spoonq_2_slides">Slides</h2>
+				<ul class="slides">
+					<li><a href="doc/slide_2020kickoff.pdf"><figure><img src="doc/slide_2020kickoff.svg"><figcaption>2020.4</figcaption></figure></a></li>
+					<li><a href="doc/slide_2020mid1.pdf">   <figure><img src="doc/slide_2020mid1.svg">   <figcaption>2020.9</figcaption></figure></a></li>
+					<li><a href="doc/slide_2020mid2.pdf">   <figure><img src="doc/slide_2020mid2.svg">   <figcaption>2020.11</figcaption></figure></a></li>
+				</ul>
+			</section>
 			<h1 id="spoonq_1">1st generation SpoonQ Project (2019)</h1>
 			<section>
 				<p>
@@ -34,7 +80,9 @@
 				</p>
 				<p>
 					Annealing is a new approach introduced by <a href="http://www.qa.iir.titech.ac.jp/~nishimori/">Hidetoshi Nishimori</a> in 1998, to solve optimize problems in Ising machine<a href="#nishimori">1</a>.
-				</p> <p> There are many researches to solve CSP or COP problems by annealing, but it is hard for end users because of following complex procedures:
+				</p>
+				<p>
+					There are many researches to solve CSP or COP problems by annealing, but it is hard for end users because of following complex procedures:
 					<ol>
 						<li>Formulate the problems to solve.</li>
 						<li>Convert the formulated problem to optimization form.</li>
@@ -48,22 +96,43 @@
 				<p>
 					The SpoonQ project enable the first-look users solving their problems using annealing machine.
 				</p>
-			</section>
-			<aside>
-				<cite id="nishimori"><a href="http://www.qa.iir.titech.ac.jp/~nishimori/papers/98PRE5355.pdf">T. Kadowaki and H. Nishimori, Quantum annealing in the transverse Ising model, Phys. Rev. E., 1998</a></cite>
-			</aside>
-			<h1 id="spoonq_2">2nd generation SpoonQ Project (2020-)</h1>
-			<section>
-				TBA
+				
+				<a href="https://github.com/SpoonQ/SpoonQ">GitHub Page</a>
+				
+				<h2 id="spoonq_1_screenshots">Screenshots</h2>
+				<img style="width: 300px" src="img/ss2.svg">
+				
+				<h2 id="spoonq_1_slides">Slides</h2>
+				<ul class="slides">
+					<li><a href="doc/slide_2019kickoff.pdf"><figure><img src="doc/slide_2019kickoff.svg"><figcaption>2019.9</figcaption></figure></a></li>
+					<li><a href="doc/slide_2019mid.pdf">    <figure><img src="doc/slide_2019mid.svg">    <figcaption>2019.12</figcaption></figure></a></li>
+					<li><a href="doc/slide_2019final.pdf">  <figure><img src="doc/slide_2019final.svg">  <figcaption>2019.2</figcaption></figure></a></li>
+				</ul>
+				
+				<h2 id="spoonq_1_publications">Publications</h2>
+				<ul>
+					<li><a href="https://www.ieice.org/ken/paper/20191118R1sn/">小津泰生, アニーリングマシン向けプログラミング言語, QIT41, 2019</a></li>
+					<li><a href="https://www.ipsj.or.jp/event/taikai/82/ipsj_web2020/data/pdf/4K-05.html">小津泰生, アニーリングマシン向けプログラミング言語, 第82回情報処理学会, 2019</a></li>
+				</ul>
 			</section>
 			<h1 id="rustqubo">RustQUBO Project (2020-)</h1>
 			<section>
-				TBA
+				<a href="https://github.com/SpoonQ/rustqubo">GitHub Page</a>
+				<a href="https://spoonq.github.io/rustqubo">Website</a>
 			</section>
-			<h1 id="pub">Publications and Slides</h1>
+			<h1 id="qbsolv_rust">qbsolv_rust Project (2020-)</h1>
 			<section>
-				TBA 
+				<a href="https://github.com/SpoonQ/qbsolv_rust">GitHub Page</a>
+				<a href="https://spoonq.github.io/qbsolv_rust">Website</a>
+			</section>
+			<h1 id="annealers_rust">annealers_rust Project (2020-)</h1>
+			<section>
+				<a href="https://github.com/SpoonQ/annealers_rust">GitHub Page</a>
+				<a href="https://spoonq.github.io/annealers_rust">Website</a>
 			</section>
 		</main>
+		<aside>
+			<cite id="nishimori"><a href="http://www.qa.iir.titech.ac.jp/~nishimori/papers/98PRE5355.pdf">T. Kadowaki and H. Nishimori, Quantum annealing in the transverse Ising model, Phys. Rev. E., 1998</a></cite>
+		</aside>
 	</body>
 </html>
